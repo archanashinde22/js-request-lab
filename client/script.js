@@ -120,12 +120,12 @@ document.getElementById("animals-button").addEventListener("click", ohMy);
 
 const repeatMyParam = () => {
   //YOUR CODE HERE
-  axios.get('http://localhost:3000/repeat/Archana').then((res) => {
+  axios.get('http://localhost:3000/repeat/Bright-Path').then((res) => {
     let repeatText = document.getElementById("repeat-text");
     repeatText.style.display="block";
-    console.log(res.data);
+   
     repeatText.textContent = res.data;
-    console.log(repeatText);
+   
   });
 };
 
@@ -155,7 +155,7 @@ document
 
 // const query = ""
 // const query = 'What happened?'
-const query = "What happened?"
+const query = "query1=dog&query2=cat"
 const sendQuery = () => {
   axios.get(`http://localhost:3000/query-test/?${query}`).then((res) => {
     console.log(res.data);
